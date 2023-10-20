@@ -16,7 +16,10 @@
         <h2>Pass Generator</h2>
         <div class="wrapper">
             <div class="input-box">
+                <!-- disabledでユーザがー入力できないように設定している -->
+                <!-- このinputタグは生成したパスワードを表示するために使うので、ユーザーが入力する必要はない -->
                 <input type="text" disabled>
+                <!-- googleが提供するアイコンを使用している -->
                 <span class="material-symbols-rounded">copy_all</span>
             </div>
             <div class="pass-indicator"></div>
@@ -25,6 +28,8 @@
                     <label class="title">Password Lenght</label>
                     <span></span>
                 </div>
+                <!-- valueは初期値 -->
+                <!-- stepは増減の単位 -->
                 <input type="range" min="1" max="30" value="15" step="1">
             </div>
 
@@ -32,6 +37,7 @@
                 <label class="title">Pass Settings</label>
                 <ul class="options">
                     <li class="option">
+                        <!-- checkedは常にチェックされた状態を意味する -->
                         <input type="checkbox" id="lowercase" checked>
                         <label for="lowercase">Lowercase (a-z)</label>
                     </li>
