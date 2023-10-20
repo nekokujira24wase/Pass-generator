@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* すべての文字にgoogleフォントを適用 */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -11,6 +12,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* ページを高さの最小値を100vhに設定することでスクロールが発動しないようになっている */
     min-height: 100vh;
     background: #43A047;
 }
@@ -26,6 +28,7 @@ body{
     font-weight: 600;
     font-size: 1.31rem;
     padding: 1rem 1.75rem;
+    /* したのborderにだけ線を入れている */
     border-bottom: 1px solid #d4dbe5;
 }
 
@@ -46,6 +49,7 @@ body{
     font-weight: 500;
     border-radius: 4px;
     letter-spacing: 1.4px;
+    /* inputタグの枠の太さを調整している */
     border: 1px solid #aaa;
     padding: 0 2.85rem 0 1rem;
 }
@@ -58,7 +62,9 @@ body{
     color: #707070;
 }
 
+/* spanタグがhoverされた時に適用される */
 .input-box span:hover{
+    /* !importantは他のスタイルよりも優先される */
     color: #43A047 !important;
 }
 
@@ -76,9 +82,11 @@ body{
     height: 100%;
     width: 50%;
     border-radius: inherit;
+    /* widthの値の変化をease関数を使って制御している */
     transition: width 0.3s ease;
 }
 
+/* jsでidを追加してidが追加された時のスタイルの変化を設定している。 */
 .pass-indicator#weak::before{
     width: 20%;
     background: #e64a4a;
@@ -123,6 +131,7 @@ body{
 }
 
 .options .option:first-child{
+    /* 制御不能している */
     pointer-events: none;
 }
 
@@ -145,6 +154,7 @@ body{
 .wrapper .generate-btn{
     width: 100%;
     color: #fff;
+    /* borderを消している */
     border: none;
     outline: none;
     cursor: pointer;
@@ -152,6 +162,12 @@ body{
     font-size: 1.06rem;
     padding: 0.94rem 0;
     border-radius: 5px;
+    /*
+    none: テキストの変換を行いません（デフォルト値）。
+    capitalize: 各単語の最初の文字を大文字にします。
+    lowercase: 全ての文字を小文字に変換します。
+    full-width: アルファベットや数字などの文字を、全角文字に変換します。
+    */
     text-transform: uppercase;
     margin: 0.94rem 0 1.3rem;
 }
